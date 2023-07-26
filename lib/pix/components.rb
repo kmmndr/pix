@@ -4,3 +4,4 @@ module Pix
 end
 
 require_relative 'components/accordion'
+require_relative 'components/card'
