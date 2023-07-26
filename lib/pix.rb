@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "pix/version"
+require_relative 'pix/version'
 
 module Pix
   class Error < StandardError; end
