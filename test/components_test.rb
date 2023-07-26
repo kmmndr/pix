@@ -26,4 +26,12 @@ class ComponentsTest < Minitest::Test
     end
     assert_equal '<article><header>foo</header><main>bar</main><footer>baz</footer></article>', output
   end
+
+  def test_dropdown
+    output = render Pix::Components::Dropdown.new('foo') do |dropdown|
+      dropdown.with_item { 'bar' }
+      dropdown.with_item { 'baz' }
+    end
+    assert_equal '<details class="dropdown"><summary>foo</summary><ul><li>bar</li><li>baz</li></ul></details>', output
+  end
 end
