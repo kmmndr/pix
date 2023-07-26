@@ -71,3 +71,7 @@ Style/OpenStructUse:
 
 Style/SymbolArray:
   Enabled: false
+
+Lint/MissingSuper:
+  Exclude:
+    - 'lib/pix/components/*'
