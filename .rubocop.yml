@@ -76,3 +76,4 @@ Style/SymbolArray:
 Lint/MissingSuper:
   Exclude:
     - 'lib/pix/components/*'
+    - 'lib/pix/forms/*'

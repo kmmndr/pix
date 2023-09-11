@@ -3,6 +3,7 @@
 require 'phlex'
 
 require_relative 'pix/components'
+require_relative 'pix/forms'
 require_relative 'pix/version'
 
 module Pix
