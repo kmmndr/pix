@@ -34,4 +34,11 @@ class ComponentsTest < Minitest::Test
     end
     assert_equal '<details class="dropdown"><summary>foo</summary><ul><li>bar</li><li>baz</li></ul></details>', output
   end
+
+  def test_modal
+    output = render Pix::Components::Modal.new do
+      'foo'
+    end
+    assert_equal '<dialog><article>foo</article></dialog>', output
+  end
 end
