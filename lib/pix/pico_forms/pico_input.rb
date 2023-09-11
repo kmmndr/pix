@@ -1,6 +1,6 @@
 module Pix
-  module Forms
-    class BasicInput < Phlex::HTML
+  module PicoForms
+    class PicoBasicInput < Phlex::HTML
       def initialize(placeholder: nil, aria_label: nil)
         @placeholder = placeholder
         @aria_label = aria_label || placeholder
@@ -9,7 +9,7 @@ module Pix
       def template(&)
         input_type = self.class.name
                          .split('::').last
-                         .gsub(/^Input/, '')
+                         .gsub(/^PicoInput/, '')
                          .downcase
 
         attrs = {
@@ -22,11 +22,11 @@ module Pix
       end
     end
 
-    class InputText < BasicInput; end
-    class InputEmail < BasicInput; end
-    class InputNumber < BasicInput; end
-    class InputPassword < BasicInput; end
-    class InputTel < BasicInput; end
-    class InputUrl < BasicInput; end
+    class PicoInputText < PicoBasicInput; end
+    class PicoInputEmail < PicoBasicInput; end
+    class PicoInputNumber < PicoBasicInput; end
+    class PicoInputPassword < PicoBasicInput; end
+    class PicoInputTel < PicoBasicInput; end
+    class PicoInputUrl < PicoBasicInput; end
   end
 end

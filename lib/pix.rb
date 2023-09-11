@@ -3,7 +3,7 @@
 require 'phlex'
 
 require_relative 'pix/pico_components'
-require_relative 'pix/forms'
+require_relative 'pix/pico_forms'
 require_relative 'pix/version'
 
 module Pix
