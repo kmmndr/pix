@@ -1,7 +1,7 @@
 module Pix
-  module Components
-    class Nav < Phlex::HTML
-      class NavGroup < Phlex::HTML
+  module PicoComponents
+    class PicoNav < Phlex::HTML
+      class PicoNavGroup < Phlex::HTML
         include Phlex::DeferredRender
 
         def initialize
@@ -17,11 +17,11 @@ module Pix
         end
 
         def with_item(...)
-          @items << NavItem.new(...)
+          @items << PicoNavItem.new(...)
         end
       end
 
-      class NavItem < Phlex::HTML
+      class PicoNavItem < Phlex::HTML
         def template(&)
           li(&)
         end
@@ -42,7 +42,7 @@ module Pix
       end
 
       def with_group(...)
-        @groups << NavGroup.new(...)
+        @groups << PicoNavGroup.new(...)
       end
     end
   end

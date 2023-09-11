@@ -1,6 +1,6 @@
 module Pix
-  module Components
-    class Accordion < Phlex::HTML
+  module PicoComponents
+    class PicoAccordion < Phlex::HTML
       def initialize(summary)
         @summary = summary
       end

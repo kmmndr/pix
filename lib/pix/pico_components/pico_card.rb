@@ -1,6 +1,6 @@
 module Pix
-  module Components
-    class Card < Phlex::HTML
+  module PicoComponents
+    class PicoCard < Phlex::HTML
       def template(&)
         article(&)
       end

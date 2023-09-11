@@ -1,7 +1,7 @@
 module Pix
-  module Components
-    class Dropdown < Phlex::HTML
-      class DropdownItem < Phlex::HTML
+  module PicoComponents
+    class PicoDropdown < Phlex::HTML
+      class PicoDropdownItem < Phlex::HTML
         def template(&)
           li(&)
         end
@@ -27,7 +27,7 @@ module Pix
       end
 
       def with_item(...)
-        @items << DropdownItem.new(...)
+        @items << PicoDropdownItem.new(...)
       end
     end
   end

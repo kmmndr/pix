@@ -1,25 +1,25 @@
 require 'test_helper'
 require 'phlex/testing/view_helper'
 
-class ComponentsTest < Minitest::Test
+class PicoComponentsTest < Minitest::Test
   include Phlex::Testing::ViewHelper
 
-  def test_accordion
-    output = render Pix::Components::Accordion.new('foo') do
+  def test_pico_accordion
+    output = render Pix::PicoComponents::PicoAccordion.new('foo') do
       'bar'
     end
     assert_equal '<details><summary>foo</summary>bar</details>', output
   end
 
-  def test_card
-    output = render Pix::Components::Card.new do
+  def test_pico_card
+    output = render Pix::PicoComponents::PicoCard.new do
       'foo'
     end
     assert_equal '<article>foo</article>', output
   end
 
-  def test_advanced_card
-    output = render Pix::Components::Card.new do |card|
+  def test_advanced_pico_card
+    output = render Pix::PicoComponents::PicoCard.new do |card|
       card.header { 'foo' }
       card.main { 'bar' }
       card.footer { 'baz' }
@@ -27,23 +27,23 @@ class ComponentsTest < Minitest::Test
     assert_equal '<article><header>foo</header><main>bar</main><footer>baz</footer></article>', output
   end
 
-  def test_dropdown
-    output = render Pix::Components::Dropdown.new('foo') do |dropdown|
+  def test_pico_dropdown
+    output = render Pix::PicoComponents::PicoDropdown.new('foo') do |dropdown|
       dropdown.with_item { 'bar' }
       dropdown.with_item { 'baz' }
     end
     assert_equal '<details class="dropdown"><summary>foo</summary><ul><li>bar</li><li>baz</li></ul></details>', output
   end
 
-  def test_modal
-    output = render Pix::Components::Modal.new do
+  def test_pico_modal
+    output = render Pix::PicoComponents::PicoModal.new do
       'foo'
     end
     assert_equal '<dialog><article>foo</article></dialog>', output
   end
 
-  def test_nav
-    output = render Pix::Components::Nav.new do |nav|
+  def test_pico_nav
+    output = render Pix::PicoComponents::PicoNav.new do |nav|
       nav.with_group do |group|
         group.with_item { 'foo' }
       end

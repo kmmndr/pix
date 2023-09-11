@@ -1,6 +1,6 @@
 module Pix
-  module Components
-    class Modal < Phlex::HTML
+  module PicoComponents
+    class PicoModal < Phlex::HTML
       def template(&)
         dialog do
           article(&)
