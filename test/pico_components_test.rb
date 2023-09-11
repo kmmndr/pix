@@ -54,4 +54,14 @@ class PicoComponentsTest < Minitest::Test
     end
     assert_equal '<nav><ul><li>foo</li></ul><ul><li>bar</li><li>baz</li></ul></nav>', output
   end
+
+  def test_pico_progress
+    output = render Pix::PicoComponents::PicoProgress.new
+    assert_equal '<progress></progress>', output
+  end
+
+  def test_advanced_pico_progress
+    output = render Pix::PicoComponents::PicoProgress.new(value: 10, max: 50)
+    assert_equal '<progress value="10" max="50"></progress>', output
+  end
 end
