@@ -41,4 +41,17 @@ class ComponentsTest < Minitest::Test
     end
     assert_equal '<dialog><article>foo</article></dialog>', output
   end
+
+  def test_nav
+    output = render Pix::Components::Nav.new do |nav|
+      nav.with_group do |group|
+        group.with_item { 'foo' }
+      end
+      nav.with_group do |group|
+        group.with_item { 'bar' }
+        group.with_item { 'baz' }
+      end
+    end
+    assert_equal '<nav><ul><li>foo</li></ul><ul><li>bar</li><li>baz</li></ul></nav>', output
+  end
 end
